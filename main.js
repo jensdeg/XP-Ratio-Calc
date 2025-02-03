@@ -1,12 +1,15 @@
-let xplevel
+let xplevel = parseInt(localStorage.getItem('xplevel')) || 0 
 let magnetratio = parseInt(document.getElementById("magnet-input").value)
 let gsratio = parseInt(document.getElementById("gs-input").value)
 let fragmentratio = parseInt(document.getElementById("fragment-input").value)
 let wrenchratio = parseInt(document.getElementById("wrench-input").value)
 let scrapratio = parseInt(document.getElementById("scrap-input").value)
+updateCalculations()
+document.getElementById("XPLEVEL").value = xplevel || 0
 
 document.getElementById("XPLEVEL").addEventListener("input",function(){
     xplevel = parseInt(document.getElementById("XPLEVEL").value);
+    localStorage.setItem('xplevel', xplevel)
     updateCalculations()
 })
 document.getElementById("magnet-input").addEventListener("input",function(){
