@@ -24,6 +24,7 @@ input{
     width: 5ch;
     margin-bottom: 7px;
     margin-left: 3px;
+    background-color: ghostwhite;
 }
 .lvl-input{
     display: flex;
