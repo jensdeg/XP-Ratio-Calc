@@ -57,14 +57,17 @@ function calculatelevel(xplevel, ratio){
 }
 
 function Reset(){
-    document.getElementById("magnet-input").value = 35
-    document.getElementById("gs-input").value = 45
-    document.getElementById("fragment-input").value = 25
-    document.getElementById("wrench-input").value = 25
-    document.getElementById("scrap-input").value = 5
-    localStorage.setItem('magnet', 35)
-    localStorage.setItem('gs', 45)
-    localStorage.setItem('fragment', 25)
-    localStorage.setItem('wrench', 25)
-    localStorage.setItem('scrap', 5)
+    magnetratio = 35, gsratio = 45, fragmentratio = 25, wrenchratio = 25, scrapratio = 5
+    document.getElementById("magnet-input").value = magnetratio
+    document.getElementById("gs-input").value = gsratio
+    document.getElementById("fragment-input").value = fragmentratio
+    document.getElementById("wrench-input").value = wrenchratio
+    document.getElementById("scrap-input").value = scrapratio
+    localStorage.setItem('magnet', magnetratio)
+    localStorage.setItem('gs', gsratio)
+    localStorage.setItem('fragment', fragmentratio)
+    localStorage.setItem('wrench', wrenchratio)
+    localStorage.setItem('scrap', scrapratio)
+    
+    updateCalculations()
 }
